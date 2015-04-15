@@ -74,4 +74,4 @@ function handleError(err) {
 var http = require("http");
 setInterval(function() {
     http.get("http://mr-bennett.herokuapp.com");
-}, 600000);
+}, 300000);
