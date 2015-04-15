@@ -21,22 +21,22 @@ console.log("Express is running on port " + port);
 console.log('Mr Bennett is online!');
 
 //get date string for today's date (e.g. '2011-01-01')
-function datestring () {
+/*function datestring () {
   var d = new Date(Date.now() - 5*60*60*1000);  //est timezone
   return d.getUTCFullYear()   + '-'
      +  (d.getUTCMonth() + 1) + '-'
      +   d.getDate();
-};
+}*/
 
 setInterval(function() {
   bot.twit.get('followers/ids', function(err, reply) {
-    if(err) return handleError(err)
+    if(err) return handleError(err);
     console.log('\n# followers:' + reply.ids.length.toString());
   });
   var rand = Math.random();
 
-    if(rand <= 0.04) {//make a retweet
-    var params = {
+    if(rand <= 0.00) {//make a retweet
+   /* var params = {
         q: "&#34;mr bennett&#34; -filter:replies"
       , since: datestring()
       //, result_type: "mixed"
@@ -46,10 +46,10 @@ setInterval(function() {
     bot.retweet(params, function(err, reply) {
       if(err) return handleError(err);
       console.log("\nRetweet: retweeted response: " + reply.id);
-    });
+    });*/
 }
 	
-    else if(rand <= 0.52) {// make a friend
+    else if(rand <= 0.50) {// make a friend
     bot.mingle(function(err, reply) {
       if(err) return handleError(err);
 
