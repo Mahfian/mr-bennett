@@ -35,21 +35,7 @@ setInterval(function() {
   });
   var rand = Math.random();
 
-    if(rand <= 0.00) {//make a retweet
-   /* var params = {
-        q: "&#34;mr bennett&#34; -filter:replies"
-      , since: datestring()
-      //, result_type: "mixed"
-	  , lang: "en"
-    };
- 
-    bot.retweet(params, function(err, reply) {
-      if(err) return handleError(err);
-      console.log("\nRetweet: retweeted response: " + reply.id);
-    });*/
-}
-	
-    else if(rand <= 0.50) {// make a friend
+    if(rand <= 0.50) {// make a friend
     bot.mingle(function(err, reply) {
       if(err) return handleError(err);
 
@@ -74,4 +60,4 @@ function handleError(err) {
 var http = require("http");
 setInterval(function() {
     http.get("http://mr-bennett.herokuapp.com");
-}, 300000);
+}, 50000);
