@@ -20,14 +20,6 @@ console.log("Express is running on port " + port);
 
 console.log('Mr Bennett is online!');
 
-//get date string for today's date (e.g. '2011-01-01')
-/*function datestring () {
-  var d = new Date(Date.now() - 5*60*60*1000);  //est timezone
-  return d.getUTCFullYear()   + '-'
-     +  (d.getUTCMonth() + 1) + '-'
-     +   d.getDate();
-}*/
-
 setInterval(function() {
   bot.twit.get('followers/ids', function(err, reply) {
     if(err) return handleError(err);
@@ -50,7 +42,7 @@ setInterval(function() {
       console.log('\nPrune: unfollowed @'+ name);
     });
   }
-}, 350001);
+}, 280000);
 
 function handleError(err) {
   console.error('response status:', err.statusCode);
